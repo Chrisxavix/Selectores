@@ -30,6 +30,20 @@
     </div>
   </div>
 
+  <!-- Borders -->
+  <div class="row mb-3" *ngIf="this.borders.length > 0">
+    <div class="col">
+      <label class="form-label">Fronteras:</label>
+      <select
+        formControlName="border"
+        class="form-control"
+      >
+        <option value="">-- Seleccione una frontera --</option>
+        <option *ngFor="let border of this.borders" [value]="border.cca3"> {{ border.name }} </option>
+      </select>
+    </div>
+  </div>
+
 </form>
 
 <h3>Formulariio</h3>
